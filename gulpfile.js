@@ -7,7 +7,8 @@ global.$ = {
     task: require('./gulp/paths/tasks.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
+    app: require('./gulp/paths/app.js'),
+    appSettings: require('./env.js')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
