@@ -4,7 +4,7 @@
   "author": "a.kalin",
   "license": "ISC",
   "scripts": {
-    "postinstall": "bower install && mv env.example.js env.js"
+    "postinstall": "bower install && cp env.example.js env.js"
   },
   "devDependencies": {
     "browser-sync": "2.11.2",
