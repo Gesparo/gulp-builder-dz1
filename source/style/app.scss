@@ -11,6 +11,17 @@ html, body {
   }
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+
 .container {
   width: 1230px;
   margin: 0 auto;
@@ -34,3 +45,4 @@ html, body {
 
 @import "sections/header";
 @import "sections/main-content";
+@import "sections/footer";
