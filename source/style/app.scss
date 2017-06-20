@@ -5,6 +5,7 @@
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   font-size: 16px;
+  height: 100%;
 
   @include phones() {
     font-size: 14px;
@@ -13,14 +14,14 @@ html, body {
 
 .site {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  height: 100%;
 }
 
 .site-content {
-  flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
 }
-
 
 .container {
   width: 1230px;
