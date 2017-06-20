@@ -1,0 +1,12 @@
+.main-content {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__advantages-item {
+    list-style: inherit;
+  }
+}
