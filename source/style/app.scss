@@ -1,5 +1,33 @@
-body {
-  margin: 0;
+@import "layout/common";
+
+@import "_mixins";
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-size: 16px;
+
+  @include phones() {
+    font-size: 14px;
+  }
 }
 
-@import 'common/greating';
+.container {
+  width: 1230px;
+  margin: 0 auto;
+  position: relative;
+
+  //@TODO When finish adaptive part - remove unnecessary class from here and from all .container -s in html
+  &_adaptive {
+    @include desktop {
+      width: 990px;
+    }
+
+    @include laptop() {
+      width: 750px;
+    }
+
+    @include tablets() {
+      width: 95%;
+    }
+  }
+}

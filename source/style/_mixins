@@ -19,6 +19,25 @@
   }
 }
 
+%justifyBlock {
+  text-align: justify;
+
+  line-height: 0;
+  font-size: 1px;
+
+  text-justify: newspaper;
+  zoom:1;
+
+  &:after {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+  }
+}
+
 //responsive
 @function rem($px) {
   @return $px / 16px + 0rem;
@@ -26,7 +45,7 @@
 
 
 @mixin desktop {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1240px) {
     @content;
   }
 }
@@ -49,4 +68,15 @@
   @media screen and (max-width: 480px) {
     @content;
   }
+}
+
+
+@mixin interactive {
+  &:hover, &:focus, &:active {
+    @content;
+  }
+}
+
+@function twoThird($px) {
+  @return $px * 2 / 3;
 }
