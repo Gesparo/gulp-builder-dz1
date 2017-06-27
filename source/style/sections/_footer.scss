@@ -14,4 +14,12 @@
   &__component {
     width: 33.3%;
   }
+
+  &_policy {
+    color: #fff;
+
+    @include interactive {
+      color: darken(#fff, 15);
+    }
+  }
 }
