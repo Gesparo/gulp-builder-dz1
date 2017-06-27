@@ -1,5 +1,13 @@
 .header {
   flex: none;
+  position: relative;
+  z-index: 2;
+
+  &__title-text {
+    font-weight: normal;
+    max-width: 250px;
+    display: inline-block;
+  }
 
   &__content {
     display: flex;
@@ -7,15 +15,32 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
+    padding: 15px 0 30px;
+
+    @include tablets {
+      flex-wrap: wrap;
+    }
   }
 
   &__component {
     width: 33%;
+
+    @include tablets {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__logo-link {
     display: block;
     width: 100%;
+
+    @include tablets {
+      max-width: 400px;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__logo-image {
@@ -25,9 +50,19 @@
 
   &__phone-block {
     text-align: right;
+    color: $primary-color;
+    font-size: 1.9rem;
+
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &_title {
     text-align: center;
+
+    @include tablets {
+      margin-bottom: 10px;
+    }
   }
 }

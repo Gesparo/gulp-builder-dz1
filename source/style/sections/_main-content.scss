@@ -1,12 +1,475 @@
 .main-content {
+  $parent : &;
+
+  position: relative;
+  z-index: 2;
+
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+    padding: 90px 0 20px;
+
+    @include laptop {
+      flex-wrap: wrap;
+      padding-top: 40px;
+    }
+
+    @include tablets {
+      padding-top: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__advantages-list {
+    text-align: left;
+    margin-bottom: 30px;
   }
 
   &__advantages-item {
     list-style: inherit;
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+  }
+
+  &__left-section {
+    width: 40%;
+
+    @include laptop {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__left-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #f5a551;
+    margin: 0;
+
+    @include tablets {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__rigth-title {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin: 0 0 15px;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__right-section {
+    width: 60%;
+    text-align: center;
+
+    @include laptop {
+      width: 100%;
+    }
+  }
+
+  &__test-button {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 15px 20px 18px;
+    background-color: #ff992f;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  &__right-section-content {
+    display: inline-block;
+  }
+
+  &__left-section {
+
+  }
+
+  &__test-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__test-block {
+    display: none;
+  }
+
+  &__test-right-section {
+    width: 100%;
+  }
+
+  &__test-left-section {
+    width: 280px;
+    margin-right: 40px;
+
+    @include laptop {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  &__discount-section {
+    padding: 18px 35px;
+    border: 5px solid white;
+    background-color: rgba(245, 165, 81, 0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    @include laptop {
+      max-width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__discount-title {
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  &__significant-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  &__discount {
+    margin: 0;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #f5a551;
+    font-weight: normal;
+  }
+
+  &__callback-title {
+    margin: 0;
+    font-weight: normal;
+    color: #f5a551;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  &__callback-button {
+    background-color: #ff992f;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__discount-section {
+    padding: 18px 35px;
+    border: 5px solid white;
+    background-color: rgba(245, 165, 81, 0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__discount-title {
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  &__significant-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  &__discount {
+    margin: 0;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #f5a551;
+    font-weight: normal;
+  }
+
+  &__callback-section {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px;
+    border-radius: 6px;
+  }
+
+  &__callback-form {
+    padding: 25px 35px;
+    text-align: center;
+
+    @include phones {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+
+  &__callback-title {
+    margin: 0;
+    font-weight: normal;
+    color: #f5a551;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  &__callback-input {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 100%;
+
+    @include laptop {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  &__callback-button {
+    background-color: #ff992f;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include laptop {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__question {
+    display: none;
+  }
+
+  &__question-number {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: lighter;
+  }
+
+  &__question-title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #f5a551;
+    text-transform: uppercase;
+
+    @include laptop {
+      text-align: center;
+    }
+
+    @include tablets {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__answer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &_image-answer {
+    width: 45%;
+    padding: 40px 40px 20px;
+    background-color: rgba(0, 0, 0, .6);
+    margin-bottom: 30px;
+    border-radius: 7px;
+
+    @include tablets {
+      width: 300px;
+    }
+
+    @include phones {
+      width: 95%;
+      padding: 35px 35px 15px;
+    }
+  }
+
+  &__answer-image {
+    width: 100%;
+    height: 280px;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 3px solid #424141;
+
+    @include desktop {
+      height: 200px;
+    }
+
+    @include phones {
+      height: auto;
+    }
+  }
+
+  &__answer-checkbox {
+    display: none;
+  }
+
+  &__answer-checkbox-label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 3px solid #f5a551;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @include tablets {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__answer-checkbox-label {
+    position: relative;
+    padding: 5px 0 5px 41px;
+    font-size: 1.3rem;
+
+    @include tablets {
+      font-size: 1.1rem;
+    }
+
+    @include phones {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__answer-checkbox:checked + &__answer-checkbox-label:before {
+    background: transparent url('../img/confirm.svg') center no-repeat;
+    background-size: 80%;
+  }
+
+  &__question-managment {
+    text-align: center;
+  }
+
+  &__question-button {
+    display: inline-block;
+    padding: 12px 35px 10px;
+    background-color: #ff992f;
+    color: #171616;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  &_text-answer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 7px;
+  }
+
+  &__input-label {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__answer-input {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__left-confirm-section {
+    width: 280px;
+    margin-right: 40px;
+
+    @include tablets {
+      width: 100%;
+      margin-right: auto;
+      order: 2;
+    }
+  }
+
+  &__confirm-test {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include tablets {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__confirm-test {
+    display: none;
+  }
+
+  &_confirm-form {
+    padding-top: 5px;
+
+    #{$parent}__callback-input {
+      background-color: rgba(27, 27, 27, 0.9);
+    }
+
+    @include tablets {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__right-confirm-section {
+    @include tablets {
+      order: 1;
+    }
+  }
+
+  &_primary-text {
+    color: #f5a551;
+    font-weight: bold;
   }
 }

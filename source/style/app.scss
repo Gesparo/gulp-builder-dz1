@@ -2,6 +2,8 @@
 
 @import "_mixins";
 
+$primary-color: #f5a551;
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   font-size: 16px;
@@ -12,15 +14,33 @@ html, body {
   }
 }
 
-.site {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+body {
+  background: grey url("../img/main-background/provans.jpg") center no-repeat fixed;
+  background-size: cover;
+  color: white;
 }
 
-.site-content {
-  flex: 1 0 auto;
-  width: 100%;
+body:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -70px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 70px;
 }
 
 .container {

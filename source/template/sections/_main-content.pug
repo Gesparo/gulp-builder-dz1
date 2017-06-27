@@ -8,14 +8,40 @@
           Кухни прованс из массива дерева и природного камня
 
       .main-content__right-section
-        h2.main-content__rigth-title.
-          Ответьте на 5 вопросов и получите:
+        .main-content__right-section-content
+          h2.main-content__rigth-title.
+            Ответьте на 5 вопросов и получите:
 
-        ol.main-content__advantages-list
-          li.main-content__advantages-item 3D проект вашей кухни
-          li.main-content__advantages-item Полную стоимость кухни "под ключ"
-          li.main-content__advantages-item Подарок за экономию нашего времени
+          ol.main-content__advantages-list
+            li.main-content__advantages-item 3D проект вашей кухни
+            li.main-content__advantages-item Полную стоимость кухни "под ключ"
+            li.main-content__advantages-item Подарок за экономию нашего времени
 
-        .main-content__right-management-block
-          a.main-content__right-button.main-content__test-button Пройти тест
+          .main-content__right-management-block
+            a.main-content__right-button.main-content__test-button(data-next="1") Пройти тест
 
+      .main-content__test-block
+
+        .main-content__test-left-section
+          include sub-sections/main-content__test-left-section
+
+        form.main-content__test-right-section
+          include sub-sections/main-content__questions
+
+          .main-content__confirm-test
+            .main-content__left-confirm-section
+
+              .main-content__callback-form.main-content_confirm-form
+                input.main-content__callback-input(type="text" name="name" placeholder="Имя")
+                input.main-content__callback-input(type="phone" name="phone" placeholder="Телефон" required)
+                button.main-content__callback-button(type="submit") Позвонить мне
+
+            .main-content__right-confirm-section
+
+              h2.main-content__rigth-title.
+                Ваша скидка <span class="main-content_primary-text"><span id="total-discount">0</span> рублей</span> действует в течение 30 дней!
+
+              ol.main-content__advantages-list
+                li.main-content__advantages-item 3D проект вашей кухни
+                li.main-content__advantages-item Полную стоимость кухни "под ключ"
+                li.main-content__advantages-item Подарок за экономию нашего времени
