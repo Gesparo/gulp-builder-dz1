@@ -55,7 +55,7 @@ var moreInfoWindow = (function () {
 
     initStatus = false;
 
-    $('html, body').css('overflow', 'auto');
+    $('html, body').css('overflow', 'visible');
   };
 
   var _removeCloseModalEventListener = function () {
