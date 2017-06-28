@@ -13,5 +13,11 @@
     h3.main-content__callback-title Обратный звонок
     input.main-content__callback-input(type="text" name="name" placeholder="Имя")
     input.main-content__callback-input(type="phone" name="phone" placeholder="Телефон" required)
+
+    .main-content__callback-policy
+      input.main-content__callback-policy-checkbox(type="checkbox" name="confirmation" value="yes" checked required)
+      .main-content__callback-policy-text.
+        Для отправки заявки необходимо дать согласие на <a class="main-content__callback-policy-link" href="#">обработку персональных данных</a>
+
     button.main-content__callback-button(type="submit") Позвонить мне
 
