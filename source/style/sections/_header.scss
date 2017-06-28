@@ -74,4 +74,14 @@
       text-align: center;
     }
   }
+
+  &__phone-sub-description {
+    margin: 0;
+    text-align: right;
+    font-weight: normal;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
 }
