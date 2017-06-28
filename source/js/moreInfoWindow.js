@@ -81,19 +81,11 @@ var moreInfoWindow = (function () {
   };
 
   var _showWindow = function () {
-    infoWindow.css({
-      opacity: "1",
-      visibility: "visible",
-      display : "block"
-    });
+    infoWindow.fadeIn();
   };
 
   var _hideWindow = function () {
-    infoWindow.css({
-      opacity: "0",
-      visibility: "hidden",
-      display : "none"
-    });
+    infoWindow.fadeOut(150);
   };
 
   return {
