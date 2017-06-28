@@ -10,9 +10,9 @@ var test = (function () {
       discountElement = $('#discount');
 
   var init = function () {
-    $('.main-content__test-button').on('click', activateTestEvent);
+    $('.main-content__test-button').on('click', _activateTestEvent);
 
-    $('.main-content_next-button').on('click', nextStepEvent);
+    $('.main-content_next-button').on('click', _nextStepEvent);
   };
 
   /**
@@ -21,7 +21,7 @@ var test = (function () {
    * @param e
    * @returns {boolean}
    */
-  var nextStepEvent = function (e) {
+  var _nextStepEvent = function (e) {
     e.preventDefault();
 
     var $this = $(this),
@@ -32,7 +32,7 @@ var test = (function () {
 
     _changeDiscountAmount( _increaseDiscountAmount() );
 
-    if( isNumber(nextQuestionNumber) )
+    if( _isNumber(nextQuestionNumber) )
     {
       var nextQuestion = null;
 
@@ -41,13 +41,13 @@ var test = (function () {
       }).eq(0);
 
       nextQuestion.show();
-      fucusBlock(nextQuestion);
+      _fucusBlock(nextQuestion);
 
       return true;
     }
 
     testLeftSection.hide();
-    showFlex(confirmTest);
+    _showFlex(confirmTest);
     $('#total-discount').text(discount);
 
     return true;
@@ -58,7 +58,7 @@ var test = (function () {
    *
    * @param element
    */
-  var fucusBlock = function (element) {
+  var _fucusBlock = function (element) {
     $('html, body').animate({
       scrollTop: element.eq(0).offset().top
     }, 500);
@@ -69,12 +69,12 @@ var test = (function () {
    *
    * @param e
    */
-  var activateTestEvent = function (e) {
+  var _activateTestEvent = function (e) {
     e.preventDefault();
 
     leftSection.hide();
     rightSection.hide();
-    showFlex(testBlock);
+    _showFlex(testBlock);
 
     var questionNumber = $(this).data('next');
     var firstQuestion = null;
@@ -84,7 +84,7 @@ var test = (function () {
     }).eq(0);
 
     firstQuestion.show();
-    fucusBlock(firstQuestion);
+    _fucusBlock(firstQuestion);
   };
 
   var _increaseDiscountAmount = function () {
@@ -103,7 +103,7 @@ var test = (function () {
    * @param element
    * @returns {boolean}
    */
-  var showFlex = function (element) {
+  var _showFlex = function (element) {
     element.show().css('display', 'flex');
 
     return true;
@@ -115,7 +115,7 @@ var test = (function () {
    * @param n
    * @returns {boolean}
    */
-  var isNumber = function isNumber(n) {
+  var _isNumber = function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
 
