@@ -262,6 +262,7 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #ffffff;
+    box-shadow: 2px 2px 1px 1px #96520c;
 
     @include interactive {
       background-color: darken(#ff992f, 10);
