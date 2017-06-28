@@ -175,17 +175,6 @@
     font-size: 1.4rem;
   }
 
-  &__callback-button {
-    background-color: #ff992f;
-    padding: 8px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
   &__discount-section {
     padding: 18px 35px;
     border: 5px solid white;
@@ -264,9 +253,15 @@
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    color: black;
+    width: 100%;
     font-weight: bold;
     cursor: pointer;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @include interactive {
+      background-color: darken(#ff992f, 10);
+    }
 
     @include laptop {
       display: block;

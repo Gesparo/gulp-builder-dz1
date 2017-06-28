@@ -33,14 +33,15 @@
             .main-content__left-confirm-section
 
               .main-content__callback-form.main-content_confirm-form
-                input.main-content__callback-input(type="text" name="name" placeholder="Имя")
                 input.main-content__callback-input(type="phone" name="phone" placeholder="Телефон" required)
-                button.main-content__callback-button(type="submit") Позвоните мне
+                input.main-content__callback-input(type="email" name="email" placeholder="E-mail")
+                button.main-content__callback-button(type="submit") Получить
 
             .main-content__right-confirm-section
 
               h2.main-content__rigth-title.
-                Ваша скидка <span class="main-content_primary-text"><span id="total-discount">0</span> рублей</span> действует в течение 30 дней!
+                Ваша скидка <span class="main-content_primary-text"><span id="total-discount">0</span> рублей</span>
+                действует в течение 30 дней!<br>Получите:
 
               ol.main-content__advantages-list
                 li.main-content__advantages-item 3D проект вашей кухни
