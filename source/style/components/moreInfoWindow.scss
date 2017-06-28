@@ -68,4 +68,16 @@
     }
   }
 
+  &_lock-body {
+    overflow: hidden;
+    position: absolute;
+
+    @include desktop {
+      // in this article
+      // https://stackoverflow.com/questions/9538868/prevent-body-from-scrolling-when-a-modal-is-opened
+      // sayed that we need to set position: fixed for devices that width less then 1200. But it don't work.
+      // Only position absolute works correctly
+      position: absolute;
+    }
+  }
 }

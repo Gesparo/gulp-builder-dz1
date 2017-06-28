@@ -13,7 +13,7 @@ var moreInfoWindow = (function () {
 
       _addCloseModalEventListener();
 
-      $('html, body').css('overflow', 'hidden');
+      $('body').addClass('more-info-window_lock-body');
 
       _showOverlayBackground();
       _showWindow();
@@ -55,7 +55,7 @@ var moreInfoWindow = (function () {
 
     initStatus = false;
 
-    $('html, body').css('overflow', 'visible');
+    $('body').removeClass('more-info-window_lock-body');
   };
 
   var _removeCloseModalEventListener = function () {
