@@ -25,6 +25,7 @@
   &__advantages-list {
     text-align: left;
     margin-bottom: 30px;
+    padding-left: 18px;
   }
 
   &__advantages-item {
@@ -43,11 +44,15 @@
   }
 
   &__left-title {
-    text-align: center;
+    text-align: left;
     font-size: 3rem;
     font-weight: normal;
     color: #f5a551;
     margin: 0;
+
+    @include laptop {
+      text-align: center;
+    }
 
     @include tablets {
       font-size: 2.4rem;

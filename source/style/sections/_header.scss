@@ -58,11 +58,20 @@
     }
   }
 
-  &_title {
+  &_title-block {
     text-align: center;
 
     @include tablets {
       margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    text-align: left;
+
+    @include laptop {
+      text-align: center;
     }
   }
 }
