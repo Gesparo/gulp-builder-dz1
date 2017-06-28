@@ -142,8 +142,9 @@ var test = (function () {
         return $(this).data('question') == nextQuestionNumber;
       }).eq(0);
 
-      nextQuestion.fadeIn(500);
-      _fucusBlock(nextQuestion);
+      nextQuestion.fadeIn(500, function () {
+        _fucusBlock(nextQuestion);
+      });
 
       return true;
     }
@@ -199,8 +200,9 @@ var test = (function () {
       return $(this).data('question') == questionNumber;
     }).eq(0);
 
-    firstQuestion.fadeIn(600);
-    _fucusBlock(firstQuestion);
+    firstQuestion.fadeIn(600, function () {
+      _fucusBlock(firstQuestion);
+    });
   };
 
   var _increaseDiscountAmount = function () {
