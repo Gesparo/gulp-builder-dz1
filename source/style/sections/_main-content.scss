@@ -343,6 +343,11 @@
     }
   }
 
+  &_label-answer {
+    display: block;
+    cursor: pointer;
+  }
+
   &__answer-checkbox {
     display: none;
   }
@@ -392,12 +397,13 @@
     display: inline-block;
     padding: 12px 35px 10px;
     background-color: #ff992f;
-    color: #171616;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
+    text-decoration: underline;
   }
 
   &_text-answer {
