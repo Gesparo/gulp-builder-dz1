@@ -491,4 +491,28 @@
     border-radius: 6.8px;
     display: none;
   }
+
+  &__callback-policy {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  &__callback-policy-checkbox {
+    display: inline;
+  }
+
+  &__callback-policy-text {
+    display: inline;
+    font-size: 0.6rem;
+    vertical-align: middle;
+  }
+
+  &__callback-policy-link {
+    color: #f5a551;
+
+    @include interactive {
+      color: darken(#f5a551, 10);
+    }
+  }
 }

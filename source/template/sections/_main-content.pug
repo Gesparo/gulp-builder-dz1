@@ -35,6 +35,12 @@
               .main-content__callback-form.main-content_confirm-form
                 input.main-content__callback-input(type="phone" name="phone" placeholder="Телефон" required)
                 input.main-content__callback-input(type="email" name="email" placeholder="E-mail")
+
+                .main-content__callback-policy
+                  input.main-content__callback-policy-checkbox(type="checkbox" name="confirmation" value="yes" checked required)
+                  .main-content__callback-policy-text.
+                    Для отправки заявки необходимо дать согласие на <a class="main-content__callback-policy-link" href="#">обработку персональных данных</a>
+
                 button.main-content__callback-button(type="submit") Получить
 
             .main-content__right-confirm-section
