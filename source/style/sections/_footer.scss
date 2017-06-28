@@ -32,4 +32,12 @@
       color: darken(#fff, 15);
     }
   }
+
+  &_requisites-component {
+    text-align: left;
+  }
+
+  &_callback-component {
+    text-align: right;
+  }
 }
