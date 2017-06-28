@@ -35,9 +35,17 @@
 
   &_requisites-component {
     text-align: left;
+
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &_callback-component {
     text-align: right;
+
+    @include tablets {
+      text-align: center;
+    }
   }
 }
