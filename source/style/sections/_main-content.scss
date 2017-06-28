@@ -87,7 +87,11 @@
     color: #ffffff;
     cursor: pointer;
     text-transform: uppercase;
-    text-decoration: underline;
+    box-shadow: 2px 2px 1px 1px #96520c;
+
+    @include interactive {
+      background-color: darken(#ff992f, 10);
+    }
   }
 
   &__right-section-content {
@@ -398,7 +402,11 @@
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
-    text-decoration: underline;
+    box-shadow: 2px 2px 1px 1px #96520c;
+
+    @include interactive {
+      background-color: darken(#ff992f, 10);
+    }
   }
 
   &_text-answer {
